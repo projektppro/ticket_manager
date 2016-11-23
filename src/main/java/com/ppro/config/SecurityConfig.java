@@ -34,16 +34,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers("/login").permitAll()
-                .antMatchers("/adm/**").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
-                .and().formLogin().loginPage("/login")
-                .successHandler(customSuccessHandler)
-                .usernameParameter("ssoId").passwordParameter("password")
-                .and().csrf()
-                .and().exceptionHandling().accessDeniedPage("/acces_denied");
+        http.authorizeRequests().
+                antMatchers("/").permitAll().
+                antMatchers("/login").permitAll().
+                antMatchers("/**").permitAll().
+                antMatchers("/adm/**").access("hasRole('ROLE_ADMIN')").
+//                antMatchers("/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')").
+                and().formLogin().loginPage("/login").
+                successHandler(customSuccessHandler).
+                usernameParameter("ssoId").passwordParameter("password").
+                and().csrf().
+                and().exceptionHandling().accessDeniedPage("/acces_denied");
 
     }
 }
