@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Arci on 24.11.2016.
  */
 public interface UserRoleService {
-    List<Integer> findByUserId(int userId);
+    List<UserRole> findByUserId(int userId);
 
     List<UserRole> findAll();
 

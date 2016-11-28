@@ -13,13 +13,16 @@ import java.util.List;
 @Service
 public class UserRoleServiceImpl implements UserRoleService {
 
-    @Qualifier("userRoleRepository")
+    private final UserRoleRepository repository;
+
     @Autowired
-    private UserRoleRepository repository;
+    public UserRoleServiceImpl(@Qualifier("userRoleRepository") UserRoleRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
-    public List<Integer> findByUserId(int userId) {
-        return (List<Integer>) repository.findByUserid(userId);
+    public List<UserRole> findByUserId(int userId) {
+        return (List<UserRole>) repository.findByUserid(userId);
     }
 
     @Override

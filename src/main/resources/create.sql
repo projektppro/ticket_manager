@@ -23,7 +23,7 @@ CREATE UNIQUE INDEX user_id_uindex ON customuser (id);
 CREATE TABLE person
 (
     id INTEGER PRIMARY KEY NOT NULL,
-    dateofbirth DATE DEFAULT now(),
+    dateofbirth TIMESTAMP,
     firstname VARCHAR(50) NOT NULL,
     lastname VARCHAR(50) NOT NULL
 );
@@ -38,7 +38,7 @@ CREATE TABLE ticket
 (
     id INTEGER PRIMARY KEY NOT NULL,
     airplaneid INTEGER,
-    date DATE,
+    date TIMESTAMP DEFAULT now(),
     personid INTEGER
 );
 CREATE UNIQUE INDEX ticket_id_uindex ON ticket (id);
