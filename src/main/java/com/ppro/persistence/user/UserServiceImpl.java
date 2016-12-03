@@ -3,6 +3,7 @@ package com.ppro.persistence.user;
 import com.ppro.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,10 +16,16 @@ public class UserServiceImpl implements UserService {
 
 
 
-    @Qualifier("userRepository")
-    @Autowired
-    private UserRepository userRepository;
 
+
+    private final UserRepository userRepository;
+    @Autowired
+    private PasswordEncoder encoder;
+
+    @Autowired
+    public UserServiceImpl(@Qualifier("userRepository") UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
 
     @Override
@@ -33,6 +40,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUser(User user) {
+        user.setPassword(encoder.encode(user.getPassword()));
         userRepository.save(user);
     }
 

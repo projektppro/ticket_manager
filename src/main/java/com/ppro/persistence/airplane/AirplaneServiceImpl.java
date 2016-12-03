@@ -13,9 +13,12 @@ import java.util.List;
 @Service("airplaneService")
 public class AirplaneServiceImpl implements AirplaneServise {
 
-    @Qualifier("airplaneRepository")
+    private final AirplaneRepository airplaneRepository;
+
     @Autowired
-    private AirplaneRepository airplaneRepository;
+    public AirplaneServiceImpl(@Qualifier("airplaneRepository") AirplaneRepository airplaneRepository) {
+        this.airplaneRepository = airplaneRepository;
+    }
 
     @Override
     public List<Airplane> findAll() {

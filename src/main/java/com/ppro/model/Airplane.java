@@ -1,9 +1,8 @@
 package com.ppro.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.persistence.*;
 
 /**
  * Created by Arci on 22.11.2016.
@@ -15,6 +14,8 @@ public class Airplane {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "airplane_seq_gen")
+    @SequenceGenerator(name = "airplane_seq_gen",sequenceName = "airplane_id_seq")
     public Integer getId() {
         return id;
     }
@@ -25,6 +26,7 @@ public class Airplane {
 
     @Basic
     @Column(name = "name")
+    @NotBlank(message = "Vyplňte jméno letadla")
     public String getName() {
         return name;
     }
@@ -51,5 +53,10 @@ public class Airplane {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "id: "+id+" name: "+name;
     }
 }

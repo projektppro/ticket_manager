@@ -1,10 +1,14 @@
 package com.ppro.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 /**
  * Created by Arci on 22.11.2016.
@@ -12,7 +16,7 @@ import java.sql.Date;
 @Entity
 public class Person {
     private int id;
-    private Date dateofbirth;
+    private Timestamp dateofbirth;
     private String firstname;
     private String lastname;
 
@@ -28,16 +32,18 @@ public class Person {
 
     @Basic
     @Column(name = "dateofbirth")
-    public Date getDateofbirth() {
+    @NotBlank(message = "Fill your date of birth")
+    public Timestamp getDateofbirth() {
         return dateofbirth;
     }
 
-    public void setDateofbirth(Date dateofbirth) {
+    public void setDateofbirth(Timestamp dateofbirth) {
         this.dateofbirth = dateofbirth;
     }
 
     @Basic
     @Column(name = "firstname")
+    @NotBlank(message = "Fill your first name")
     public String getFirstname() {
         return firstname;
     }
@@ -48,6 +54,7 @@ public class Person {
 
     @Basic
     @Column(name = "lastname")
+    @NotBlank(message = "Fill your last name")
     public String getLastname() {
         return lastname;
     }
