@@ -1,0 +1,295 @@
+/* CSS Document */
+
+body{
+    background-image:url(../images/adm_bg.jpg);
+    background-repeat: repeat;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.big{
+    margin:0px auto 0px auto;
+    width:1068px;
+    min-height:200px;
+}
+
+.big_top{
+    width:1068px;
+    height:50px;
+    float:left;
+    background-image:url(../images/big_top.png);
+}
+
+.big_middle{
+    width:1068px;
+    float:left;
+    background-image:url(../images/big_middle.png);
+}
+
+.big_bottom{
+    width:1068px;
+    height:50px;
+    float:left;
+    background-image:url(../images/big_bottom.png);
+}
+
+.menu_left{
+    float:left;
+    width:180px;
+    margin-left:50px;
+}
+
+.menu_left a{
+    width:180px;
+    float:left;
+    height:40px;
+    background-image:url(../images/button.jpg);
+    font-size:16px;
+    font-weight:bold;
+    color:#FFF;
+    margin-top:10px;
+    text-align:center;
+    line-height:40px;
+    text-decoration:none;
+}
+.menu_left img {
+    width: 250px;
+}
+
+.menu_left a:hover, .menu_left a.pol-aktivni{
+    background-image:url(../images/button_blue.jpg);
+}
+
+.top_menu{
+    float:left;
+    width:100%;
+    text-align:center;
+    height:40px;
+    line-height:31px;
+    background-image:url(../images/top_menu.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.top_menu a{
+    color:#61C70B;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.content{
+    float:left;
+    margin-right:50px;
+    margin-left:28px;
+    width:760px;
+    min-height:200px;
+}
+
+h1{
+    float:left;
+    width:100%;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:22px;
+    color:#61C70B;
+}
+
+form{
+    display:inline;
+}
+
+table{
+    font-size:12px;
+    width:100%;
+}
+
+table th{
+    background-color:#E4F0E8;
+    color:#000;
+    height:25px;
+}
+
+table td{
+    color:#000;
+    height:25px;
+    text-align:center;
+}
+
+table.zbozi_edit td{
+    text-align:left;
+}
+
+table td.first{
+    text-align:left;
+    font-weight:bold;
+}
+
+table td.light{
+    background-color:#FEF7BC;
+}
+
+table td.dark{
+    background-color:#E4F0E8;
+}
+input[type="text"] , input[type="password"]{
+    width: 300px;
+    height: 30px;
+    margin-right: 400px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 3px solid black;
+    padding: 5px;
+    float: left;
+}
+input[type="submit"] {
+    width: 150px;
+    height: 30px;
+    background-color: #55b20b;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+.alert-danger  {
+    background-color: red;
+    border: 3px solid darkred;
+    width: 700px;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    fotn-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.alert-success  {
+    background-color: green;
+    border: 3px solid darkgreen;
+    width: 700px;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    fotn-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+.content table td.left{
+    text-align:left;
+    font-weight:bold;
+}
+
+.content table td.right{
+    text-align:right;
+}
+
+.content table td form{
+    margin:0px;
+}
+
+
+
+.content table td, .content table th{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.content table input[type="text"]{
+    width:150px;
+}
+
+.content select{
+    min-width:180px;
+}
+
+.content table.zbozi_edit{
+    width:100%;
+    border:none;
+}
+
+.content table.zbozi_edit td, .content table.zbozi_edit th{
+    border:none;
+}
+
+label{
+    width:200px;
+    display:inline-block;
+    font-weight:bold;
+    font-size:14px;
+}
+
+table.nastaveni textarea{
+    width:250px;
+    height:70px;
+}
+
+table.nastaveni input[type="text"]{
+    width:250px;
+}
+
+/*table detail objednavky*/
+
+
+.table-detail-order {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: auto!important;
+}
+
+.table-detail-order tr td{
+    border: none;
+    height: 25px;
+}
+
+.table-detail-order tr td.column-1 {
+    width: 30px;
+}
+
+.table-detail-order tr td.column-2 {
+    width: 310px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-detail-order tr td.column-3 {
+    width: 280px;
+    text-align: left;
+}
+
+.order-detail-block {
+    margin-left: 100px;
+}
+
+.produkt_foto{
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color:#FFFFFF;
+    text-align:center;
+    margin: 0 0 0 0;
+    border: 1px solid black;
+}
+
+.produkt_foto img {
+    width: 100px;
+    height: 100px;
+}
+
+.posun {
+    padding: 35px 0 0 20px;
+}
+
+.foto_smazat {
+    color: rgb(224, 64, 64);
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.no_foto_text {
+    padding: 40px 0 0 0;
+    font-style: italic;
+}
