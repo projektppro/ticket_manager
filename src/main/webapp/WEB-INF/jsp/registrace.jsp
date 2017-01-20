@@ -14,11 +14,18 @@
             <div>
                 <h1>REGISTRACE</h1>
                 <div id="main-form">
-                    <form action="prihlaseni.jsp" method="post">
+                    <form action="registrace.jsp" method="post">
                         <table>
+                        <tr><td style="text-align: right">Jméno:</td><td style="text-align: left"><input type="text" name="jmeno" class="longer"></td></tr>
+                            <tr><td style="text-align: right">Příjmení:</td><td style="text-align: left"><input type="text" name="prijmeni" class="longer"></td></tr>
+                            <tr><td style="text-align: right">E-mail:</td><td style="text-align: left"><input type="mail" name="email" class="longer"></td></tr>
+                            <tr><td style="text-align: right">Telefon:</td><td style="text-align: left"><input type="text" name="telefon" class="longer"></td></tr>
                             <tr><td style="text-align: right">Login:</td><td style="text-align: left"><input type="text" name="login" class="longer"></td></tr>
                             <tr><td style="text-align: right">Heslo:</td><td style="text-align: left"><input type="text" name="heslo" class="longer"></td></tr>
-                            <tr><td colspan="2"><input type="submit" value="Přihlásit" class="tlacitko"></td></tr>
+                            <tr><td style="text-align: right">Ověření hesla:</td><td style="text-align: left"><input type="text" name="heslo2" class="longer"></td></tr>
+                            <tr><td colspan="2"><span id="registrace">Přeji si odebírat novinky na mail </span><input type="checkbox" name="novinky" value="1"></td></tr>
+                            <tr><td colspan="2"><span id="registrace">Souhlasím s podmínami užívání </span><input type="checkbox" name="podminky" value="1"></td></tr>
+                            <tr><td colspan="2"><input type="submit" value="Registrovat" class="tlacitko"></td></tr>
                         </table>
                     </form>
                 </div>
@@ -28,7 +35,7 @@
             <div>
                 <h1>SLEVA</h1>
                 <p>Máte jedinečnou možnost ušetřit až 40% na zpátečních letenkách!</p>
-                <a href="blog.html" class="more">Mám zájem</a>
+                <a href="#" class="more">Mám zájem</a>
             </div>
         </div>
     </div>

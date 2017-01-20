@@ -196,9 +196,17 @@ img {
 #registrace{
 	color: #FFFFFF;
 	font-size: 16px;
+	display: inline;
+	max-width: 700px !important;
+	margin: 0 !important;
+	width: 500px !important;
 }
 #registrace:hover{
 	text-decoration: underline;
+}
+#body.home #main-form input[type='checkbox'] {
+    width: 20px;
+    vertical-align: middle;
 }
 
 
@@ -210,7 +218,7 @@ img {
 
 
 #body.home div.header div span {
-	display: block;
+	/*display: block;*/
 	margin: 0 auto 52px;
 	max-width: 350px;
 	overflow: hidden;

@@ -115,6 +115,7 @@ table td{
     color:#000;
     height:25px;
     text-align:center;
+    font-size: 14px;
 }
 
 table.zbozi_edit td{
@@ -133,10 +134,10 @@ table td.light{
 table td.dark{
     background-color:#E4F0E8;
 }
-input[type="text"] , input[type="password"]{
+input[type="text"] , input[type="password"], select{
     width: 300px;
     height: 30px;
-    margin-right: 400px;
+   /* margin-right: 400px;*/
     margin-bottom: 10px;
     border-radius: 5px;
     border: 3px solid black;
@@ -144,11 +145,12 @@ input[type="text"] , input[type="password"]{
     float: left;
 }
 input[type="submit"] {
-    width: 150px;
+    width: 170px;
     height: 30px;
     background-color: #55b20b;
     color: #FFFFFF;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 .alert-danger  {
     background-color: red;
@@ -198,7 +200,7 @@ input[type="submit"] {
 }
 
 .content table input[type="text"]{
-    width:150px;
+    /*width:150px;*/
 }
 
 .content select{

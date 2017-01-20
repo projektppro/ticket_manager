@@ -17,12 +17,17 @@ public class UserController {
     private UserServiceImpl userService;
 
     @RequestMapping("/adm/user")
-    public String user(Model model){
+    public String user(Model model) {
         User user = new User();
         user.setId(6);
         user.setUsername("franta");
         user.setPassword("d");
         userService.saveUser(user);
         return "adm/user";
+    }
+
+    @RequestMapping("/adm/index")
+    public String index(){
+        return "adm/index";
     }
 }

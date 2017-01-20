@@ -2,7 +2,6 @@ package com.ppro.controller;
 
 import com.ppro.model.Airplane;
 import com.ppro.persistence.airplane.AirplaneServiceImpl;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,27 +24,33 @@ public class AirplaneController {
     @Autowired
     private AirplaneServiceImpl airplaneService;
 
-    @RequestMapping("/adm/airplane")
+    @RequestMapping("/adm/airplane/airplane")
     public String saveAiplane(Model model){
-        Airplane airplane = new Airplane();
-        airplane.setId(5);
-        airplane.setName("boing");
-        airplaneService.saveAirplane(airplane);
-        model.addAttribute("name",airplane.getName());
+       // Airplane airplane = new Airplane();
+       // airplane.setId(5);
+       // airplane.setName("boing");
+       // airplaneService.saveAirplane(airplane);
+      //  model.addAttribute("name",airplane.getName());
         return "adm/airplane/airplane";
     }
-
+    @RequestMapping("/adm/airplane/add_airplane_form")
+    public String addairplane(Model model){
+        Airplane airplane = new Airplane();
+        model.addAttribute("airplane", airplane);
+        return "adm/airplane/add_airplane_form";
+    }
     @GetMapping("adm/add_airplane")
     public String addAirplaneGet(Model model){
-        model.addAttribute("airplane",new Airplane());
+        //Airplane airplane = new Airplane();
+       // model.addAttribute("airplane", airplane);
         return "adm/airplane/add_airplane_form";
     }
 
     @PostMapping("adm/add_airplane")
     public String addAirplanePost(@Valid @RequestAttribute("airplane") Airplane airplane, BindingResult bindingResult, Model model){
-        airplaneService.saveAirplane(airplane);
+        //airplaneService.saveAirplane(airplane);
         model.addAttribute("result"," Letadlo bylo uloženo");
-        log.info("Airplane was saved: "+airplane.toString());// TODO: 25.11.2016 dodelat prevod na string u vsech
+        //log.info("Airplane was saved: "+airplane.toString());// TODO: 25.11.2016 dodelat prevod na string u vsech
         return "result";
     }
 }

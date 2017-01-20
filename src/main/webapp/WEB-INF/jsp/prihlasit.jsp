@@ -25,7 +25,7 @@
                         <table>
                             <tr><td style="text-align: right">Login:</td><td style="text-align: left"><input type="text" name="login" class="longer"></td></tr>
                             <tr><td style="text-align: right">Heslo:</td><td style="text-align: left"><input type="text" name="heslo" class="longer"></td></tr>
-                            <tr><td colspan="2"><a href="registrace.jsp" id="registrace">Registujte se zde.</a></td></tr>
+                            <tr><td colspan="2"><a href="registrace" id="registrace">Registrovat se můžete zde.</a></td></tr>
                             <tr><td colspan="2"><input type="submit" value="Přihlásit" class="tlacitko"></td></tr>
                         </table>
                     </form>
@@ -36,7 +36,7 @@
             <div>
                 <h1>SLEVA</h1>
                 <p>Máte jedinečnou možnost ušetřit až 40% na zpátečních letenkách!</p>
-                <a href="blog.html" class="more">Mám zájem</a>
+                <a href="#" class="more">Mám zájem</a>
             </div>
         </div>
     </div>

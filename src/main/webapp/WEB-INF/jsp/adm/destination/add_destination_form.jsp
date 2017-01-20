@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přidat letadlo</title>
+    <title>Přidat destinaci</title>
     <link rel="stylesheet" href="/resources/css/style_adm.css" type="text/css">
 </head>
 <body>
@@ -18,22 +18,27 @@
                 <%@ include file="../menu.jsp" %>
             </div>
             <div class="content">
-                <h1>Přidat letadlo</h1>
-                <form:form method="post" action="add_airplane" modelAttribute="airplane">
+                <h1>Přidat destinaci</h1>
+                <form:form method="post" action="add_destination" modelAttribute="airplane">
                     <table>
                         <tr>
-                            <td>Označení letadla : </td>
+                            <td>Název letiště : </td>
                             <td><form:input path="name" type="text" /></td>
                             <td><form:errors path="name"/></td>
 
                         </tr>
                         <tr>
-                            <td>Název Aerolinky : </td>
+                            <td>Město : </td>
                             <td><form:input path="name" type="text" /></td>
                             <td><form:errors path="name"/></td>
                         </tr>
                         <tr>
-                            <td>Max počet míst : </td>
+                            <td>Stát : </td>
+                            <td><form:input path="name" type="text" /></td>
+                            <td><form:errors path="name"/></td>
+                        </tr>
+                        <tr>
+                            <td>Kód státu : </td>
                             <td><form:input path="name" type="text" /></td>
                             <td><form:errors path="name"/></td>
                         </tr>

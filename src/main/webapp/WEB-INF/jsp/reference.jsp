@@ -26,9 +26,9 @@
                         <img src="/resources/images/logo.png" alt="">
                     </div>
                     <div>
-                        <h1>PREPARING FOR A MARATHON</h1>
+                        <h1>Výborné služby!</h1>
                         <p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them...</p>
-                        <a href="blogsinglepost.html" class="more">keep Reading</a>
+                        <a href="#" class="more">číst dále</a>
                     </div>
                 </li>
                 <li>
@@ -36,9 +36,9 @@
                         <img src="/resources/images/logo.png" alt="">
                     </div>
                     <div>
-                        <h1>ASIDE FROM RUNNING</h1>
+                        <h1>Super!</h1>
                         <p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them...</p>
-                        <a href="blogsinglepost.html" class="more">keep Reading</a>
+                        <a href="#" class="more">číst dále</a>
                     </div>
                 </li>
                 <li>
@@ -46,9 +46,9 @@
                         <img src="/resources/images/logo.png" alt="">
                     </div>
                     <div>
-                        <h1>WINNING IS EVERYTHING</h1>
+                        <h1>Krásný web</h1>
                         <p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them...</p>
-                        <a href="blogsinglepost.html" class="more">keep Reading</a>
+                        <a href="#" class="more">číst dále</a>
                     </div>
                 </li>
                 <li>
@@ -56,9 +56,9 @@
                         <img src="/resources/images/logo.png" alt="">
                     </div>
                     <div>
-                        <h1>RUNNING AND CROSSFIT</h1>
+                        <h1>Výborné ceny</h1>
                         <p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them...</p>
-                        <a href="blogsinglepost.html" class="more">keep Reading</a>
+                        <a href="#" class="more">číst dále</a>
                     </div>
                 </li>
             </ul>
