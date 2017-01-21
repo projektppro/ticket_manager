@@ -35,17 +35,7 @@ public class Airplane {
     public void setName(String name) {
         this.name = name;
     }
-    //@Basic
-    //@Column(name = "kapacita")
-    /*@NotBlank(message = "Vyplňte kapacitu letadla.")
-    @Max(value = 500, message = "Tolik se jich tam nevejde")
-    public Integer getKapacita() {
-        return kapacita;
-    }
 
-    public void setKapacita(Integer kapacita) {
-        this.kapacita = kapacita;
-    }*/
 
     @Override
     public boolean equals(Object o) {

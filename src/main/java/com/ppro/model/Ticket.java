@@ -27,7 +27,7 @@ public class Ticket {
     }
 
     @Basic
-    @Column(name = "airplaneid")
+    @Column(name = "fligh_id")
     public Integer getAirplaneid() {
         return airplaneid;
     }
