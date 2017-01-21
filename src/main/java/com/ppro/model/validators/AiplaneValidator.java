@@ -17,6 +17,8 @@ public class AiplaneValidator implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-
+        if (((Airplane) target).getName().isEmpty()){
+            errors.rejectValue("name","name","Jméno letadla je prázdné");
+        }
     }
 }

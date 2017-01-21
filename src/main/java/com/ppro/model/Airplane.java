@@ -1,6 +1,7 @@
 package com.ppro.model;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @Entity
 public class Airplane {
     private Integer id;
+    @NotBlank(message = "Vyplňte jméno letadla")
     private String name;
     //private Integer kapacita;
 
@@ -27,7 +29,6 @@ public class Airplane {
 
     @Basic
     @Column(name = "name")
-    @NotBlank(message = "Vyplňte jméno letadla")
     public String getName() {
         return name;
     }

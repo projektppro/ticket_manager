@@ -1,13 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přidat letadlo</title>
-    <link rel="stylesheet" href="/resources/css/style_adm.css" type="text/css">
+    <title>Reserve ticket</title>
 </head>
+
 <body>
     <div class="big">
         <div class="big_top">
