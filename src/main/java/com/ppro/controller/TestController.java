@@ -50,16 +50,16 @@ public class TestController {
     }
     @GetMapping("/objednani")
     public String objednani(Model model) {
-        model.addAttribute("objedvaka",new Objednavka());
+        model.addAttribute("objednani",new Objednavka());
         return "objednani";
     }
     @PostMapping("/objednani")
-    public String objednani(@ModelAttribute("objednani") Objednavka objednavka, BindingResult bindingResult,
+    public String objednani(@ModelAttribute("objednani") Objednavka objednavka,
                             Model model){
-        objednavkaValidace.validate(objednavka,bindingResult);
-        if (bindingResult.hasErrors()){
-            return "objednani";
-        }
+//        objednavkaValidace.validate(objednavka,bindingResult);
+//        if (bindingResult.hasErrors()){
+//            return "objednani";
+//        }
         Ticket ticket = new Ticket();
         ticket.setDate(Timestamp.valueOf(LocalDateTime.now()));
         ticket.setPersonid(personService.findByEmail(objednavka.getEmail()).get(0).getId());

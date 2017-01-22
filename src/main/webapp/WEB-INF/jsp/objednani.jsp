@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,16 +15,29 @@
             <div>
                 <h1>REZERVACE LETENEK</h1>
                 <div id="main-form">
-                    <form:form action="objednani_uspesne" method="post">
+                    <form:form method="post" action="objednani" modelAttribute="objednani">
                         <table>
-                        <tr><td style="text-align: right">Jméno:</td><td style="text-align: left"><input type="text" name="jmeno" class="longer"></td></tr>
-                            <tr><td style="text-align: right">Příjmení:</td><td style="text-align: left"><input type="text" name="prijmeni" class="longer"></td></tr>
-                            <tr><td style="text-align: right">E-mail:</td><td style="text-align: left"><input type="mail" name="email" class="longer"></td></tr>
-                            <tr><td style="text-align: right">Telefon:</td><td style="text-align: left"><input type="text" name="telefon" class="longer"></td></tr>
-                            <tr><td colspan="2"><span id="registrace">Souhlasím s podmínami užívání </span><input type="checkbox" name="podminky" value="1"></td></tr>
-                            <tr><td colspan="2"><a href="/objednani_uspesne"><input type="submit" value="Rezervovat" class="tlacitko"></a></td></tr>
+                            <tr>
+                                <td>Označení letadla : </td>
+                                <td><form:input path="jmeno" type="text"/></td>
+                                <td><form:errors path="jmeno"/></td>
+
+                            </tr>
+                            <tr>
+                                <td>Název Aerolinky : </td>
+                                <td><form:input path="prijmeni" type="text" /></td>
+                                <td><form:errors path="prijmeni"/></td>
+                            </tr>
+                            <tr>
+                                <td>Max počet míst : </td>
+                                <td><form:input path="email" type="text" /></td>
+                                <td><form:errors path="email"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="submit" value="Uložit" /></td>
+                            </tr>
                         </table>
-                    </form>
+                    </form:form>
                 </div>
             </div>
         </div>
