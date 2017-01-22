@@ -3,7 +3,6 @@ package com.ppro.model.validators;
 import com.ppro.model.Destination;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 /**
@@ -18,12 +17,19 @@ public class DestinationValidator implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        Destination destination = (Destination) target;
-
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "airportName", "Vyplň název letiště!");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "city", "Vyplň město!");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "country", "Vyplň stát!");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "countryCode", "Vyplň kód státu!");
-
+        if (((Destination) target).getAirportName().isEmpty()){
+            errors.rejectValue("airportName","airportName","Název letiště je prázdný");
+        }
+        if (((Destination) target).getCity().isEmpty()){
+            errors.rejectValue("city","city","Město je prázdné");
+        }
+        if (((Destination) target).getCountry().isEmpty()){
+            errors.rejectValue("country","country","Stát je prázdný");
+        }
+        if (((Destination) target).getCountryCode().isEmpty()){
+            errors.rejectValue("countryCode","countryCode","Zkratka státu je prázdná");
+        }
     }
+
+
 }

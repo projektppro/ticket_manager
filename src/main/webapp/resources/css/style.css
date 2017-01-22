@@ -145,7 +145,8 @@ img {
 #body.home #main-form table tr {
 	height: 65px;
 }
-#body.home #main-form input{
+#body.home #main-form input {
+    width: 200px;
 	color: #FFFFFF;
 	height: 40px;
 	border: 5px solid white;
@@ -154,6 +155,7 @@ img {
 	padding: 10px;
 	background: transparent;
 }
+
 #body.home #main-form input.longer{
 	width: 400px;
 }
@@ -164,6 +166,45 @@ img {
 	width: 70px;
 	text-align: center;
 }
+
+
+/*#hloupej_input_longer {
+    width: 400px;
+    float: left;
+	color: #FFFFFF;
+	height: 40px;
+	border: 5px solid white;
+	font-size: 25px;
+	margin-left: 15px;
+	padding: 10px;
+	background: transparent;
+}
+#hloupej_input_shorter{
+	width: 200px;
+    float: left;
+    color: #FFFFFF;
+    height: 40px;
+    border: 5px solid white;
+    font-size: 25px;
+    margin-left: 15px;
+    padding: 10px;
+    background: transparent;
+}
+#hloupej_input_shortest{
+	width: 70px;
+	 float: left;
+    color: #FFFFFF;
+    height: 40px;
+    border: 5px solid white;
+    font-size: 25px;
+    margin-left: 15px;
+    padding: 10px;
+    background: transparent;
+	text-align: center;
+}*/
+
+
+
 #body.home #main-form input.tlacitko{
 	border: 5px solid #FFFFFF;
 	color: #FFFFFF;
@@ -672,7 +713,7 @@ img {
 	text-transform: uppercase;
 	width: 491px;
 }
-#body.contact div form input#submit {
+#body.contact div form input#submit{
 	background: none;
 	border: 2px solid #FFFFFF;
 	color: #FFFFFF;
@@ -689,7 +730,7 @@ img {
 	text-transform: uppercase;
 	width: 143px;
 }
-#body.contact div form input#submit:hover {
+#body.contact div form input#submit:hover{
 	background-color: #fb416f;
 	border: none;
 	height: 43px;
