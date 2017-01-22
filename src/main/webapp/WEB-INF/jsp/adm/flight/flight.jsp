@@ -26,9 +26,6 @@
                             Název letu
                         </th>
                         <th>
-                            Datum odletu
-                        </th>
-                        <th>
                             Čas odletu
                         </th>
                         <th>
@@ -36,9 +33,6 @@
                         </th>
                         <th>
                             Místo příletu
-                        </th>
-                        <th>
-                            Počet volných míst
                         </th>
                         <th>
                             Cena letenky

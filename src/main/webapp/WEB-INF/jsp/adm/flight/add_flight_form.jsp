@@ -19,50 +19,41 @@
             </div>
             <div class="content">
                 <h1>Přidat let</h1>
-                <form:form method="post" action="add_destination" modelAttribute="airplane">
+                <form:form method="post" action="add_flight_form.jsp" modelAttribute="flight">
                     <table>
                         <tr>
                             <td>Název letu : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
-                        </tr>
-                        <tr>
-                            <td>Datum odletu : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:input path="flightName" type="text" /></td>
+                            <td><form:errors path="flightName"/></td>
                         </tr>
                         <tr>
                             <td>Čas odletu : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:input path="departureTime" type="text" /></td>
+                            <td><form:errors path="departureTime"/></td>
                         </tr>
                         <tr>
                             <td>Místo odletu : </td>
                             <td>
-                                <form:select path="name">
+                                <form:select path="departurePlace">
                                     <form:options items="${placeList}" />
                                 </form:select>
                             </td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:errors path="departurePlace"/></td>
                         </tr>
                         <tr>
                             <td>Místo příletu : </td>
                             <td>
-                                <form:select path="name">
+                                <form:select path="arrivalPlace">
+                                    <form:options value="" label="---Vyber---" />
                                     <form:options items="${placeList}" />
                                 </form:select>
                             </td>
-                            <td><form:errors path="name"/></td>
-                        </tr>
-                        <tr>
-                            <td>Počet volných míst : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:errors path="arrivalPlace"/></td>
                         </tr>
                         <tr>
                             <td>Cena letenky : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:input path="cost" type="text" /></td>
+                            <td><form:errors path="cost"/></td>
                         </tr>
                         <tr>
                             <td colspan="2"><input type="submit" value="Uložit" /></td>
