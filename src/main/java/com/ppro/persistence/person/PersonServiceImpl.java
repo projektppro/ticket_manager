@@ -55,4 +55,9 @@ public class PersonServiceImpl implements PersonService {
     public List<Person> findByDateofbirth(Date date) {
         return (List<Person>) repository.findByDateofbirth(date);
     }
+
+    @Override
+    public List<Person> findByEmail(String email) {
+        return (List<Person>) repository.findByEmail(email);
+    }
 }

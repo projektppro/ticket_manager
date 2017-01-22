@@ -19,6 +19,9 @@ public class Destination {
     private String country; //stát - název např. Česrká republika
     private String countryCode; //zkratka státu ČR
 
+    public Destination() {
+    }
+
     @Id
     @Column(name = "id")
     public int getId() {

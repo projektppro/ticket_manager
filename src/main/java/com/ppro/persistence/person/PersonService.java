@@ -20,4 +20,5 @@ public interface PersonService {
     List<Person> findByFirstname(String firstName);
     List<Person> findByLastname(String lastName);
     List<Person> findByDateofbirth(Date date);
+    List<Person> findByEmail(String email);
 }

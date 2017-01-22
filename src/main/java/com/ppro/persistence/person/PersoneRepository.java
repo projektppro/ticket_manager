@@ -12,4 +12,5 @@ public interface PersoneRepository extends CrudRepository<Person,Integer> {
     Iterable<Person> findByFirstname(String firstName);
     Iterable<Person> findByLastname(String lastName);
     Iterable<Person> findByDateofbirth(Date date);
+    Iterable<Person> findByEmail(String email);
 }
