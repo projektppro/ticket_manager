@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 @Entity
 public class Flight {
     private String flightName;
-    private Timestamp departureTime;
+    private String departureTime;
     private String departurePlace;
     private Integer flightId;
     private String arrivalsPlace;
@@ -28,11 +28,11 @@ public class Flight {
 
     @Basic
     @Column(name = "departure_time")
-    public Timestamp getDepartureTime() {
+    public String getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(Timestamp departureTime) {
+    public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
     }
 
