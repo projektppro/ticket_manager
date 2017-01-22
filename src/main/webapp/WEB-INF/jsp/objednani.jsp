@@ -39,11 +39,6 @@
                                 <td><form:errors path="idLetu"/></td>
                             </tr>
                             <tr>
-                                <td>Vaše telefoni cislo: </td>
-                                <td><form:input path="telefoniCislo" type="text" /></td>
-                                <td><form:errors path="telefoniCislo"/></td>
-                            </tr>
-                            <tr>
                                 <td colspan="2"><input type="submit" value="Uložit" /></td>
                             </tr>
                         </table>
