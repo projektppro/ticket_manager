@@ -9,7 +9,6 @@ public class Objednavka {
     String jmeno;
     String prijmeni;
     String email;
-    String telefoniCislo;
     Integer idLetu;
 
     public Integer getIdLetu() {
@@ -42,13 +41,5 @@ public class Objednavka {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getTelefoniCislo() {
-        return telefoniCislo;
-    }
-
-    public void setTelefoniCislo(String telefoniCislo) {
-        this.telefoniCislo = telefoniCislo;
     }
 }

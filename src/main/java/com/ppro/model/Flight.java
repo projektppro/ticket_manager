@@ -78,6 +78,8 @@ public class Flight {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "flight_id_seq_gen")
+    @SequenceGenerator(name = "flight_id_seq_gen",sequenceName = "flight_id_seq")
     public int getId() {
         return id;
     }

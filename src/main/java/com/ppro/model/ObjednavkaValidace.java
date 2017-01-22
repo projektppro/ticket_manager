@@ -25,8 +25,5 @@ public class ObjednavkaValidace implements Validator {
         if (((Objednavka) target).getEmail().isEmpty()){
             errors.rejectValue("email","email","Email je prázdné");
         }
-        if (((Objednavka) target).getTelefoniCislo().length() == 8){
-            errors.rejectValue("telefon","telefon","telefon je je v nesprávném tvaru");
-        }
     }
 }

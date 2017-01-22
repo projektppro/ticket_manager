@@ -18,27 +18,26 @@
                     <form:form method="post" action="objednani" modelAttribute="objednani">
                         <table>
                             <tr>
-                                <td>Jméno : </td>
+                                <td>Vaše jméno : </td>
                                 <td><form:input path="jmeno" type="text"/></td>
                                 <td><form:errors path="jmeno"/></td>
 
                             </tr>
                             <tr>
-                                <td>Příjmení : </td>
+                                <td>Vaše příjmení : </td>
                                 <td><form:input path="prijmeni" type="text" /></td>
                                 <td><form:errors path="prijmeni"/></td>
                             </tr>
                             <tr>
-                                <td>E-mail : </td>
+                                <td>Váš email: </td>
                                 <td><form:input path="email" type="text" /></td>
                                 <td><form:errors path="email"/></td>
                             </tr>
                             <tr>
-                                <td>Telefon : </td>
-                                <td><form:input path="telefoniCislo" type="text" /></td>
-                                <td><form:errors path="telefoniCislo"/></td>
+                                <td>Id vašeho letu: </td>
+                                <td><form:input path="idLetu" type="text" /></td>
+                                <td><form:errors path="idLetu"/></td>
                             </tr>
-
                             <tr>
                                 <td colspan="2"><input type="submit" value="Uložit" /></td>
                             </tr>
