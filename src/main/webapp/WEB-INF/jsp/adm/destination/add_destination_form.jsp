@@ -19,28 +19,28 @@
             </div>
             <div class="content">
                 <h1>Přidat destinaci</h1>
-                <form:form method="post" action="add_destination" modelAttribute="airplane">
+                <form:form method="post" action="add_destination_form" modelAttribute="destination">
                     <table>
                         <tr>
                             <td>Název letiště : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:input path="airportName" name="airportName" type="text"  value="${destination.airportName}" /></td>
+                            <td><form:errors path="airportName"/></td>
 
                         </tr>
                         <tr>
                             <td>Město : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:input path="city" type="text" />${destination.city}</td>
+                            <td><form:errors path="city"/></td>
                         </tr>
                         <tr>
                             <td>Stát : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:input path="country" type="text" />${destination.country}</td>
+                            <td><form:errors path="country"/></td>
                         </tr>
                         <tr>
                             <td>Kód státu : </td>
-                            <td><form:input path="name" type="text" /></td>
-                            <td><form:errors path="name"/></td>
+                            <td><form:input path="countryCode" type="text" />${destination.countryCode}</td>
+                            <td><form:errors path="countryCode" /></td>
                         </tr>
                         <tr>
                             <td colspan="2"><input type="submit" value="Uložit" /></td>

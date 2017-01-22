@@ -1,7 +1,6 @@
 package com.ppro.model;
 
 import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
@@ -12,8 +11,9 @@ import javax.persistence.*;
 public class Airplane {
     private Integer id;
     @NotBlank(message = "Vyplňte jméno letadla")
-    private String name;
-    //private Integer kapacita;
+    private String name; //označení letadla
+    private String aeroline; //název aerolinky
+    private Integer capacity; //počet sedadel v letadla
 
     @Id
     @Column(name = "id")
@@ -36,6 +36,15 @@ public class Airplane {
         this.name = name;
     }
 
+    @Basic
+    @Column(name = "aeroline")
+    public String getAeroline() {return aeroline;}
+    public void setAeroline(String aeroline) {this.aeroline = aeroline;}
+
+    @Basic
+    @Column(name = "capacity")
+    public Integer getCapacity() {return capacity;}
+    public void setCapacity(Integer capacity) {this.capacity = capacity;}
 
     @Override
     public boolean equals(Object o) {

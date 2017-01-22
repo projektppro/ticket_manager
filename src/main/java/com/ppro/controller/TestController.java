@@ -26,6 +26,19 @@ public class TestController {
     public String index(){
         return "index";
     }
+    @RequestMapping("/nabidka_letu")
+    public String nabidka_letu() {
+        return "nabidka_letu";
+    }
+    @RequestMapping("/objednani")
+    public String objednani() {
+        return "objednani";
+    }
+    @RequestMapping("/objednani_uspesne")
+    public String objednani_uspesne() {
+        return "objednani_uspesne";
+    }
+
 
     @RequestMapping("/onas")
     public String onas(){

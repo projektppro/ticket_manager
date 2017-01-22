@@ -32,6 +32,19 @@
                             Stát
                         </th>
                     </tr>
+                    <forEach var="destination" items="${model}">
+                        <tr>
+                            <td>
+                                ${destination.airportName}
+                            </td>
+                            <td>
+                                ${destination.city}
+                            </td>
+                            <td>
+                                ${destination.country}(${destination.countryCode})
+                            </td>
+                        <tr>
+                    </forEach>
                 </table>
             </div>
         </div>

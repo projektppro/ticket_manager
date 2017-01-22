@@ -22,14 +22,14 @@
         <h1>POLEŤTE<br>S NÁMI<br>ZA SLUNCEM</h1>
         <!-- TODO -->
         <div id="main-form">
-          <form action="validace.jsp">
+          <form:form method="post" action="nabidka_letu">
             <table>
               <tr><td style="text-align: right">Odkud:</td><td style="text-align: left"><input type="text" placeholder="Zadejte místo odletu" name="odkud" class="longer"></td></tr>
               <tr><td style="text-align: right">Kam:</td><td style="text-align: left"><input type="text" placeholder="Zadejte destinaci" name="kam" class="longer"></td></tr>
               <tr><td style="text-align: right">Odlet:</td><td style="text-align: left"><input type="text" placeholder="DD.MM.RRRR" name="odlet" class="shorter"></td></tr>
               <tr><td style="text-align: right"> Návrat:</td><td style="text-align: left"><input type="text" placeholder="DD.MM.RRRR" name="navrat" class="shorter"></td></tr>
               <tr><td style="text-align: right">Počet osob:</td><td style="text-align: left"><input type="text" placeholder="1" name="kolik" class="shortest"></td></tr>
-              <tr><td colspan="2"><input type="submit" value="Hledat" class="tlacitko"></td></tr>
+              <tr><td colspan="2"><a href="/nabidka_letu"><input type="submit" value="Hledat" class="tlacitko"></a></td></tr>
             </table>
           </form>
         </div>

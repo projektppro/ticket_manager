@@ -1,5 +1,7 @@
 package com.ppro.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,71 +12,52 @@ import javax.persistence.Id;
  */
 @Entity
 public class Destination {
-    private String airport;
-    private String towen;
-    private String country;
-    private Integer countyid;
-    private Integer destinationid;
-    private int id;
-
-    @Basic
-    @Column(name = "airport")
-    public String getAirport() {
-        return airport;
-    }
-
-    public void setAirport(String airport) {
-        this.airport = airport;
-    }
-
-    @Basic
-    @Column(name = "towen")
-    public String getTowen() {
-        return towen;
-    }
-
-    public void setTowen(String towen) {
-        this.towen = towen;
-    }
-
-    @Basic
-    @Column(name = "country")
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    @Basic
-    @Column(name = "countyid")
-    public Integer getCountyid() {
-        return countyid;
-    }
-
-    public void setCountyid(Integer countyid) {
-        this.countyid = countyid;
-    }
-
-    @Basic
-    @Column(name = "destinationid")
-    public Integer getDestinationid() {
-        return destinationid;
-    }
-
-    public void setDestinationid(Integer destinationid) {
-        this.destinationid = destinationid;
-    }
+    private int id; // id destinace
+    @NotBlank(message = "Vyplňte jméno letiště.")
+    private String airportName; //název letiště např. Letiště Václava Havla
+    private String city; // název města např. Praha
+    private String country; //stát - název např. Česrká republika
+    private String countryCode; //zkratka státu ČR
 
     @Id
     @Column(name = "id")
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "airportName")
+    public String getAirportName() {return airportName;}
+    public void setAirportName(String airportName) { this.airportName = airportName;}
+
+    @Basic
+    @Column(name = "city")
+    public String getCity() {return city;}
+    public void setCity(String city) {this.city = city;}
+
+    @Basic
+    @Column(name = "country")
+    public String getCountry() {
+        return country;
+    }
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    @Basic
+    @Column(name = "countryCode")
+    public String getCountryCode() {return countryCode;}
+    public void setCountryCode(String countryCode) {this.countryCode = countryCode;}
+
+    public Destination(int id, String airportName, String city, String country, String countryCode) {
+        this.id = id;
+        this.airportName = airportName;
+        this.city = city;
+        this.country = country;
+        this.countryCode = countryCode;
     }
 
     @Override
@@ -85,23 +68,20 @@ public class Destination {
         Destination that = (Destination) o;
 
         if (id != that.id) return false;
-        if (airport != null ? !airport.equals(that.airport) : that.airport != null) return false;
-        if (towen != null ? !towen.equals(that.towen) : that.towen != null) return false;
+        if (airportName != null ? !airportName.equals(that.airportName) : that.airportName != null) return false;
+        if (city != null ? !city.equals(that.city) : that.city != null) return false;
         if (country != null ? !country.equals(that.country) : that.country != null) return false;
-        if (countyid != null ? !countyid.equals(that.countyid) : that.countyid != null) return false;
-        if (destinationid != null ? !destinationid.equals(that.destinationid) : that.destinationid != null)
-            return false;
+        if (countryCode != null ? !countryCode.equals(that.countryCode) : that.countryCode != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = airport != null ? airport.hashCode() : 0;
-        result = 31 * result + (towen != null ? towen.hashCode() : 0);
+        int result = airportName != null ? airportName.hashCode() : 0;
+        result = 31 * result + (city != null ? city.hashCode() : 0);
         result = 31 * result + (country != null ? country.hashCode() : 0);
-        result = 31 * result + (countyid != null ? countyid.hashCode() : 0);
-        result = 31 * result + (destinationid != null ? destinationid.hashCode() : 0);
+        result = 31 * result + (countryCode != null ? countryCode.hashCode() : 0);
         result = 31 * result + id;
         return result;
     }
