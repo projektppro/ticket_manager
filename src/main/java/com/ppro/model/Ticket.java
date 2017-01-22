@@ -1,9 +1,6 @@
 package com.ppro.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
@@ -18,6 +15,8 @@ public class Ticket {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "ticket_id_seq_gen")
+    @SequenceGenerator(name = "ticket_id_seq_gen",sequenceName = "ticket_id_seq")
     public int getId() {
         return id;
     }
