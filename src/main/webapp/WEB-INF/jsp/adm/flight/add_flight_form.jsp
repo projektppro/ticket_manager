@@ -19,7 +19,7 @@
             </div>
             <div class="content">
                 <h1>Přidat let</h1>
-                <form:form method="post" action="add_flight_form.jsp" modelAttribute="flight">
+                <form:form method="post" action="adm/add_flight" modelAttribute="flight">
                     <table>
                         <tr>
                             <td>Název letu : </td>
