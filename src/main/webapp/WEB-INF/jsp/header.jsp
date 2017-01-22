@@ -16,8 +16,8 @@
             <li ${pageContext.request.requestURI eq '/WEB-INF/jsp/kontakty.jsp' ? 'class="selected"' : ''}>
                 <a href="kontakty">Kontakty</a>
             </li>
-            <li ${pageContext.request.requestURI eq '/WEB-INF/jsp/prihlasit.jsp' ? 'class="selected"' : ''}>
-                <a href="prihlasit">Přihlásit</a>
+            <li ${pageContext.request.requestURI eq '/WEB-INF/jsp/login.jsp' ? 'class="selected"' : ''}>
+                <a href="login">Přihlásit</a>
             </li>
         </ul>
     </div>

@@ -24,16 +24,6 @@
                     <div class="login-form">
                         <c:url var="loginUrl" value="/login" />
                         <form action="${loginUrl}" method="post" class="form-horizontal">
-                            <c:if test="${param.error != null}">
-                                <div class="alert alert-danger">
-                                    <p>Invalid username and password.</p>
-                                </div>
-                            </c:if>
-                            <c:if test="${param.logout != null}">
-                                <div class="alert alert-success">
-                                    <p>You have been logged out successfully.</p>
-                                </div>
-                            </c:if>
                             <div class="input-group input-sm">
                                 <label class="input-group-addon" for="username"><i class="fa fa-user"></i></label>
                                 <input type="text" class="form-control" id="username" name="ssoId" placeholder="Jméno" required>

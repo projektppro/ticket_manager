@@ -1,5 +1,6 @@
-package com.ppro.model;
+package com.ppro.model.validators;
 
+import com.ppro.model.Objednavka;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

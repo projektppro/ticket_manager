@@ -1,15 +1,13 @@
 package com.ppro.controller;
 
 import com.ppro.model.Objednavka;
-import com.ppro.model.ObjednavkaValidace;
+import com.ppro.model.validators.ObjednavkaValidace;
 import com.ppro.model.Ticket;
 import com.ppro.model.User;
 import com.ppro.persistence.person.PersonServiceImpl;
 import com.ppro.persistence.ticket.TicketServiceImpl;
 import com.ppro.persistence.user.UserServiceImpl;
-import com.sun.javafx.sg.prism.NGShape;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -86,9 +84,9 @@ public class TestController {
     public String kontakty(){
         return "kontakty";
     }
-    @RequestMapping("/prihlasit")
+    @RequestMapping("/login")
     public String prihlasit(){
-        return "prihlasit";
+        return "login";
     }
     @RequestMapping("/registrace")
     public String registrace(){
