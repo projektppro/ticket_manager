@@ -30,7 +30,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("mkyong").password("123456").roles("USER");
         auth.inMemoryAuthentication().withUser("admin").password("1").roles("ADMIN");
         auth.userDetailsService(userDetailService);
         auth.authenticationProvider(authenticationProvider());
